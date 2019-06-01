@@ -1,8 +1,0 @@
-setup.py
-sparx.py
-Sparx_IO.egg-info/PKG-INFO
-Sparx_IO.egg-info/SOURCES.txt
-Sparx_IO.egg-info/dependency_links.txt
-Sparx_IO.egg-info/entry_points.txt
-Sparx_IO.egg-info/requires.txt
-Sparx_IO.egg-info/top_level.txt

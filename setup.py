@@ -1,13 +1,12 @@
 from setuptools import setup
 
 setup(
-    name="Sparx IO",
+    name="Sparx CLI",
     version='0.1',
     py_modules=["sparx"],
     license = 'BSD',
     author = 'Bastin Robins J',
     author_email = 'robin@cleverinsight.co',
-    packages = find_packages(exclude=['tests']),
     download_url = '',
     include_package_data = True,
     classifiers = [

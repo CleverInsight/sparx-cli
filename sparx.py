@@ -4,6 +4,8 @@ import yaml
 import click
 from factory.modules import download
 
+
+
 class Config(object):
     def __init__(self):
         self.verbose = False
@@ -15,7 +17,7 @@ pass_config = click.make_pass_decorator(Config, ensure=True)
 @click.option('--verbose', is_flag=True)
 @pass_config
 def cli(config, verbose):
-    """  Welcome to Sparx IO """
+    """  Welcome to Sparx CLI """
     config.verbose = verbose
    
 

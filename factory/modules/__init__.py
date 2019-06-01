@@ -14,7 +14,7 @@ def check_if_app_exist(app_name):
     Check if app_name matches with any folder in home dir
     '''
     return os.path.exists(os.path.join(os.path.join(\
-        os.path.abspath('..'), 'sparx-io'), app_name))
+        os.path.abspath('..'), 'sparx-cli'), app_name))
     
     
 
@@ -29,7 +29,7 @@ def download(url, app_name):
     response = requests.get(url, stream=True)
     total_size = int(response.headers.get('content-length', 0));
     block_size, wrote = 1024, 0
-    destination_path = os.path.join(os.path.abspath('..'), 'sparx-io')
+    destination_path = os.path.join(os.path.abspath('..'), 'sparx-cli')
 
     # dowload the tar.gz file into the given destination
     with open(os.path.join(destination_path, app_name+'.tar.gz'), 'wb') as f:
