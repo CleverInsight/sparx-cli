@@ -1,5 +1,5 @@
-# sparx-io
-Sparx IO is an async customizable API server for faster deployment of ML, DL, NLP models via YAML
+# sparx-cli
+Sparx CLI is an commandline utility to generate async customizable API server for faster deployment of ML, DL, NLP models via YAML
 
 ### Commands:
 - `sparx new create` Create new API app scaffolding.
