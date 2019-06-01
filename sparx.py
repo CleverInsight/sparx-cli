@@ -1,5 +1,8 @@
+import os
+import shutil
+import yaml
 import click
-from factory.modules import File
+from factory.modules import download
 
 class Config(object):
     def __init__(self):
@@ -23,7 +26,7 @@ def new(name):
     click.echo("=======================================")
     click.echo("Crafting a new application ..... %s" % name)
     click.echo("=======================================")
-    File.download("https://gitlab.com/cleverinsight-community/sparx/-/archive/master/sparx-master.tar.gz")
+    download("https://github.com/CleverInsight/sparx-core/archive/v1.0.0.tar.gz", name)
 
 
 @cli.command()
@@ -31,9 +34,19 @@ def new(name):
 @click.option('--name')
 def add(type, name):
     """ Add new service """
-    click.echo("---------------------------------------")
     click.echo("Added new service called %s ..." % name)
-    click.echo("---------------------------------------")
+   
+
+@cli.command()
+@click.argument('name')
+def rm(name):
+    """ Remove application created """
+    if os.path.exists(name):
+        shutil.rmtree(name)
+        click.echo(name + " removed..")
+    else:
+        click.echo("No such app exists...")
+    
 
 
 @cli.command()
@@ -41,9 +54,4 @@ def add(type, name):
 @click.option('--name')
 def deploy(type, name):
     """ Create new deployment scaffolding """
-    click.echo("---------------------------------------")
     click.echo("Added new deployment called %s ..." % name)
-    click.echo("---------------------------------------")
-
-    
-

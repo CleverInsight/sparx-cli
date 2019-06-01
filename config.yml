@@ -1,0 +1,6 @@
+# Sparx IO starting services:
+
+variables:
+  - url: https://gitlab.com/cleverinsight-community/sparx-lite/-/archive/master/sparx-lite-master.tar.gz
+  - version: 0.1
+

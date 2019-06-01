@@ -25,7 +25,10 @@ setup(
         "Programming Language :: Python :: 3.5"
     ],
     install_requires=[
-	'Click'
+        'Click',
+        'requests',
+        'tqdm',
+        'PyYAML'
     ],
     entry_points='''
 	[console_scripts]
